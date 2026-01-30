@@ -20,7 +20,6 @@ import {
   DisconnectPacket,
   PlayerActivePacket,
   PlayerInventorySlotPacket,
-  DimensionsUpdatePacket,
   Parser,
 } from "terraria-packet";
 import NetworkText from "@popstarfreas/packetfactory/networktext";
