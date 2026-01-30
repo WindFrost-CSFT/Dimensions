@@ -2,6 +2,13 @@
 
 Dimensions is: A routing service that can also load balance connections. For use with Terraria Servers.
 
+## v1.4.5.x Compatibility
+Please see latest pre-releases in https://github.com/popstarfreas/Dimensions/releases
+
+## Allow v1.4.5 Clients with v1.4.4.9 Servers
+Use the latest pre-release along with this extension:
+https://github.com/popstarfreas/dimensions-mcl/releases/tag/v1.4.5-release.1
+
 ## Installation
 ### Step 1: Install NodeJS
 Follow the link and download either version. Later releases may offer better performance. https://nodejs.org/en/
@@ -20,7 +27,7 @@ The plugin is necessary to fix IP addresses of players connecting through Dimens
 
 ### Step 4: Setting Up and Running
  * Download the latest release and extract it to its own folder
- * Open a cmd prompt/terminal at the folder and execute the command `npm install --only=production` (it may take a bit to finish)
+ * Open a cmd prompt/terminal at the folder and execute the command `pnpm install --production` (it may take a bit to finish)
  * Copy `configuration/config.yaml.example` to `configuration/config.yaml` and edit it to your specifications
  * OR follow the quickstart guide in the [Config Wiki](https://github.com/popstarfreas/Dimensions/wiki/Config)
  * To start Dimensions execute `npm run start`
@@ -50,7 +57,7 @@ Download and install Redis for your OS
 
 * Clone this repo
 * `cd` into the new directory
-* run ```npm install```
+* run ```pnpm install```
 * There are a few scripts in the package.json
     * to build (and test) ```npm run build``` this will transpile the ts files to js, run the tests and put all output js files into a build directory
     * to build then run ```npm run bstart``` this will build and then run the index.js in the build directory

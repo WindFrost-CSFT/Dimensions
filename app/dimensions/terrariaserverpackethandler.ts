@@ -20,6 +20,7 @@ import {
   DisconnectPacket,
   PlayerActivePacket,
   PlayerInventorySlotPacket,
+  DimensionsUpdatePacket,
   Parser,
 } from "terraria-packet";
 import NetworkText from "@popstarfreas/packetfactory/networktext";
@@ -444,8 +445,8 @@ class TerrariaServerPacketHandler {
 
     if (server.client.state === ClientState.FinishinedSendingInventory) {
       server.client.state = ClientState.FullyConnected;
-      //server.client.sendWaitingPackets();
-      //server.sendWaitingPackets();
+      server.client.sendWaitingPackets();
+      server.sendWaitingPackets();
       server.client.sendExtraInformation();
 
       for (let key in server.client.globalHandlers.extensions) {
