@@ -382,7 +382,8 @@ class TerrariaServerPacketHandler {
       let getSection = new PacketWriter()
         .setType(PacketTypes.GetSectionOrRequestSync)
         .packSingle(-1)
-        .packSingle(-1).data;
+        .packSingle(-1)
+        .packSingle(0).data;
       this.currentServer.sendDirect(getSection);
 
       this.currentServer.client.state = ClientState.FinalisingSwitch;
